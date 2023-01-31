@@ -1,8 +1,7 @@
+# OMS
 
-
-
-1. Build docker image:
+Run docker image with java 1.6 and maven installed:
 
 ```sh
-docker build . -t <your username>/node-web-app
+docker run -it --rm --name oms -v "$(PWD):/oms" jamesdbloom/docker-java6-maven
 ```
