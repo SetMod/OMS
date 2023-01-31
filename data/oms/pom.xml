@@ -228,12 +228,26 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 	<repositories>
 		<!-- For testing against latest Spring snapshots -->
 		<repository>
 			<id>org.springframework.maven.snapshot</id>
 			<name>Spring Maven Snapshot Repository</name>
-			<url>http://maven.springframework.org/snapshot</url>
+			<url>https://maven.springframework.org/snapshot</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -245,11 +259,20 @@
 		<repository>
 			<id>org.springframework.maven.milestone</id>
 			<name>Spring Maven Milestone Repository</name>
-			<url>http://maven.springframework.org/milestone</url>
+			<url>https://maven.springframework.org/milestone</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
 	</repositories>
 	<build>
 		<plugins>
